@@ -3,10 +3,13 @@
 
 int main(void)
 {
-    int v = 1;
+    int x = 2, *p;
+    p = &x;
+    /*aqui o valor(deferenciado por p),originalmente 2 vai ser substituido 
+     por x*5;
+    */
+    *p = x * 5;
 
-    int n = sizeof(v);
-
-    printf("%d", n);
+    printf("%d", *p);
     return 0;
 }
